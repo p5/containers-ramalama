@@ -8,7 +8,7 @@ jobs:
   linux:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Free Disk Space Linux
         shell: bash
         run: |
@@ -43,7 +43,7 @@ jobs:
   macos:
     runs-on: macos-14
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: install golang
         shell: bash
         run: brew install go
@@ -55,7 +55,7 @@ jobs:
     runs-on: ubuntu-24.04
     needs: [linux, macos]
     steps:
-        - uses: actions/checkout@v4
+        - uses: actions/checkout@v6
           with:
             ref: 's'
 
