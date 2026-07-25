@@ -67,7 +67,7 @@ jobs:
             password: ${{ secrets.PASSWORD }}
 
         - name: use buildah to build images for amd and aarch64
-          uses: redhat-actions/buildah-build@v2
+          uses: redhat-actions/buildah-build@v3
           id: build_image
           with:
             image: quay.io/ramalama/ramalama
